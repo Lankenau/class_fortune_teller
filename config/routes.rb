@@ -5,6 +5,11 @@ Rails.application.routes.draw do
 
   get("/unlucky", { :controller => "numbers", :action => "unlucky_numbers" })
 
+  get("/random_number/:num", {:controller => "numbers", :action => "random"})
+
+  get("/signs/:you", {:controller => "numbers", :action => "any_sign"})
+
+  get("/zodiacs/:zebra", {:controller => "zodiacs", :action => "any_sign"})
 
   # Uncomment each route below ONE AT A TIME and debug.
   get("/zodiacs/aries",{ :controller => "zodiacs",:action =>  "ram" })
